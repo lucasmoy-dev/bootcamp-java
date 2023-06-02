@@ -1,0 +1,7 @@
+{
+  "category": "Cultura",
+  "question": "¿Cuál es el nombre del famoso pintor español que creó el cuadro 'Guernica'?",
+  "options": ["Pablo Picasso", "Leonardo da Vinci", "Miguel Ángel"],
+  "answer": 0,
+  "explanation": "Pablo Picasso es el autor del famoso cuadro 'Guernica', que representa el bombardeo de dicha ciudad durante la Guerra Civil Española."
+}
