@@ -1,7 +1,7 @@
 {
   "category": "Cultura",
-  "question": "¿Cuál es el nombre del famoso pintor español que creó el cuadro 'Guernica'?",
-  "options": ["Pablo Picasso", "Leonardo da Vinci", "Miguel Ángel"],
+  "question": "¿Qué ingredintes se necesitan para hacer una michelada?",
+  "options": ["Cerveza, Lima o limón, Sal, Chile en polvo, Salsa tipo inglesa, Picante", "Cerveza, sal y limon", "Cerveza, sal, tabasco y limon"],
   "answer": 0,
   "explanation": "Pablo Picasso es el autor del famoso cuadro 'Guernica', que representa el bombardeo de dicha ciudad durante la Guerra Civil Española."
 }
