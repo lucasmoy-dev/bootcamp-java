@@ -1,19 +1,19 @@
 [
   {
-    "category": "Cultura",
-    "description": "Preguntas relacionadas con arte, literatura, música y otras expresiones culturales."
+    "category": "Geografía",
+    "description": "Preguntas relacionadas con paisajes, territorios, lugares, regiones, poblaciones y los modos en que todos estos elementos se interrelacionan."
   },
   {
-    "category": "Deportes",
-    "description": "Preguntas relacionadas con diversos deportes y eventos deportivos."
+    "category": "Música",
+    "description": "Preguntas relacionadas con géneros músicales, cantantes, bandas, etc."
   },
   {
-    "category": "Arte",
-    "description": "Preguntas relacionadas con pintura, escultura, arquitectura y otras formas de expresión artística."
+    "category": "Entretenimiento",
+    "description": "Preguntas relacionadas con programas, películas , series, etc."
   },
   {
-    "category": "Cine",
-    "description": "Preguntas relacionadas con películas, directores, actores y otros aspectos del cine."
+    "category": "Moda",
+    "description": "Preguntas relacionadas con diseñadores, modelos, prendas de vestir, telas y otros aspectos de la moda."
   },
   {
     "category": "Historia",

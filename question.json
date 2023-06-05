@@ -1,7 +1,7 @@
 {
-  "category": "Cultura",
-  "question": "¿Qué ingredintes se necesitan para hacer una michelada?",
-  "options": ["Cerveza, lima/limón, sal, chile en polvo, salsa tipo inglesa, picante", "Cerveza, lima/limón y limon", "Cerveza, sal, tabasco y lima/limón"],
-  "answer": 0,
-  "explanation": "La michelada, originaria de México, nacida de la creatividad y el deseo de refrescar, se convirtió en una popular bebida que cautivó a los amantes de la cerveza con su combinación única de sabores y su espíritu festivo."
+  "category": "Geografía",
+  "question": "¿Cuál es el país con mayor superficie o extenso de la Tierra?",
+  "options": [ "Canadá", "China", "Rusia", "Estados Unidos" ],
+  "answer": 2,
+  "explanation": "Rusia es el país más grande del mundo, con más de 17 millones de kilómetros cuadrados. A pesar de su gran tamaño, la población rusa es relativamente pequeña en comparación, por ejemplo, con la de China."
 }
