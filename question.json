@@ -1,7 +1,7 @@
 {
   "category": "Ciencia",
   "question": "¿Qué planeta esta mas cerca del Sol?",
-  "options": ["Marte","Jupiter","Mercurio","venus"],
+  "options": ["Marte,Jupiter,Mercurio,venus"],
   "answer": 2,
   "explanation": "Mercurio es el que se encuentra mas cercano a nuestra estrella a una distancia en promedio de 57.910.000 de kilómetros"
 }
