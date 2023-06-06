@@ -1,26 +1,26 @@
 [
   {
-    "category": "Cultura",
-    "description": "Preguntas relacionadas con arte, literatura, música y otras expresiones culturales."
+    "category": "Religión",
+    "description": "Preguntas relacionadas con temas religiosos, generalmente incómodos."
   },
   {
-    "category": "Deportes",
-    "description": "Preguntas relacionadas con diversos deportes y eventos deportivos."
+    "category": "Filosofía",
+    "description": "Preguntas relacionadas con la ciencia de la divagación."
   },
   {
-    "category": "Arte",
-    "description": "Preguntas relacionadas con pintura, escultura, arquitectura y otras formas de expresión artística."
+    "category": "Terapias alternativas",
+    "description": "Preguntas relacionadas con toda clase de supercherías, pero que si funcionan."
   },
   {
-    "category": "Cine",
-    "description": "Preguntas relacionadas con películas, directores, actores y otros aspectos del cine."
+    "category": "Cine de culto",
+    "description": "Preguntas relacionadas con películas raras que casi nadie ve ni conoce."
   },
   {
-    "category": "Historia",
-    "description": "Preguntas relacionadas con eventos históricos, personajes y períodos importantes."
+    "category": "Historia Prohibida",
+    "description": "Preguntas relacionadas con eventos con los que la ciencia formal no quiere lidiar."
   },
   {
-    "category": "Ciencia",
-    "description": "Preguntas relacionadas con diferentes ramas de la ciencia, descubrimientos y avances científicos."
+    "category": "Ciencias ocultas",
+    "description": "Preguntas relacionadas con esos temas para mentes curiosas como brujeria, adivinación, viajes astrales, etc."
   }
 ]
