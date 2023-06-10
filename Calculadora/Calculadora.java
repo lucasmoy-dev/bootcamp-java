@@ -6,14 +6,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Calculadora {
+
     public static void main(String[] args) {
         Marco miMarco= new Marco();
         miMarco.setVisible(true);
     }
-
 }
   class Marco extends JFrame {
-
     public Marco(){
 
         setTitle("Calculadora");
@@ -24,19 +23,14 @@ public class Calculadora {
 
         Lamina miLamina=new Lamina();
 
-        add(miLamina,BorderLayout.CENTER);
-
+        add(miLamina);
     }
-
-  }class Lamina extends JPanel{
-
-    private JRadioButton perro,kilometros,descuento,propina,adivina;
-
-    private JButton aceptar;
-
-    private JPanel lamina2,lamina3;
-
-    public Lamina (){
+  }
+    class Lamina extends JPanel{
+      public static JRadioButton perro,kilometros,descuento,propina,adivina;
+      private JButton aceptar;
+      private JPanel lamina2,lamina3;
+      public Lamina (){
 
         setLayout(new BorderLayout());
 
@@ -48,33 +42,17 @@ public class Calculadora {
 
         propina= new JRadioButton("Propina");
 
-        adivina=new JRadioButton("Adivina el Nª");
+        adivina=new JRadioButton("Adivina el Numero");
 
         ButtonGroup grupo=new ButtonGroup();
 
-        grupo.add(perro);
-
-        grupo.add(kilometros);
-
-        grupo.add(descuento);
-
-        grupo.add(propina);
-
-        grupo.add(adivina);
-
         lamina3=new JPanel();
 
-        lamina3.add(perro);
+        JRadioButton[]  lista= new JRadioButton[]{perro,kilometros,descuento,propina,adivina};
 
-        lamina3.add(kilometros);
+        agregarBotones(lista,grupo,lamina3);
 
-        lamina3.add(descuento);
-
-        lamina3.add(propina);
-
-        lamina3.add(adivina);
-
-        add(lamina3,BorderLayout.NORTH);
+        add(lamina3,BorderLayout.CENTER);
 
         lamina2=new JPanel();
 
@@ -87,91 +65,34 @@ public class Calculadora {
         lamina2.add(aceptar);
 
         add(lamina2,BorderLayout.SOUTH);
-
     }
+       public void agregarBotones(JRadioButton[] c,ButtonGroup br,JPanel p) {
 
-    private class Oyente implements ActionListener {
+           for (int i = 0; i < c.length; i++) {
 
-       int añoPerruno=7;
+               br.add(c[i]);
+               p.add(c[i]);
+           }
+       }
+       private class Oyente implements ActionListener {
+         @Override
+         public void actionPerformed(ActionEvent e) {
 
-       @Override
-        public void actionPerformed(ActionEvent e) {
+         try {
+           Calculos.añosPerrunos(perro);
 
-            if(perro.isSelected()){
+           Calculos.calculoKms(kilometros);
 
-               String datos= JOptionPane.showInputDialog("Ingresa la edad de tu perro");
+           Calculos.calculoDescuento(descuento);
 
-                int edadCanina=Integer.parseInt(datos);
+           Calculos.calculoPropina(propina);
 
-                int  resultado=edadCanina*añoPerruno;
+           Calculos.adivinaNumero(adivina);
 
-                JOptionPane.showMessageDialog(null,"La edad de tu perro es: " + resultado);
+          }catch(NumberFormatException n){
 
-            }else if(kilometros.isSelected()){
-
-                String datos2=JOptionPane.showInputDialog("Ingresa el numero de millas a convertir");
-
-                double milla=Double.parseDouble(datos2);
-
-                double resultado=milla*1.60934;
-
-                JOptionPane.showMessageDialog(null,"La conversion de millas a kilometros es: "+resultado);
-
-            }else if(descuento.isSelected()){
-
-                String datos=JOptionPane.showInputDialog("Ingresa el precio original");
-
-                double precioOriginal=Double.parseDouble(datos);
-
-                String datos2=JOptionPane.showInputDialog("Ingresa el porcentaje de descuento");
-
-                double porcentajeDescuento=Double.parseDouble(datos2);
-
-                double precioFinal=precioOriginal-(precioOriginal*porcentajeDescuento/100);
-
-                JOptionPane.showMessageDialog(null,"Precio a pagar despues del descuento: "+"$ "+precioFinal);
-
-            } else if(propina.isSelected()){
-
-                String datos=JOptionPane.showInputDialog("Ingresa Ingrese el monto total a pagar");
-
-                double totalCuenta=Double.parseDouble(datos);
-
-                String datos2=JOptionPane.showInputDialog("Ingresa el porcentaje de descuento");
-
-                double porcentajePropina=Double.parseDouble(datos2);
-
-                double propina=totalCuenta*(porcentajePropina/100);
-
-                JOptionPane.showMessageDialog(null,"Propina a dar: "+ "$ "+propina);
-
-            }else if(adivina.isSelected()){
-
-                int num=(int)Math.floor(Math.random()*10);
-
-                System.out.println(num);
-
-                int dato2;
-
-             try {
-                 do {
-
-                     String dato = JOptionPane.showInputDialog("Ingresa un numero");
-
-                     dato2 = Integer.parseInt(dato);
-
-                 } while (dato2 != num);
-
-                 JOptionPane.showMessageDialog(null,"Has adivinado");
-
-             }catch(NumberFormatException n){
-
-                 JOptionPane.showMessageDialog(null,"No has ingresado un numero");
-             }
-
-            }
-
+             JOptionPane.showMessageDialog(null,"No has ingresado un numero");
        }
     }
-
+  }
 }
