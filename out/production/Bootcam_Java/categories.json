@@ -1,0 +1,26 @@
+[
+  {
+    "category": "Religión",
+    "description": "Preguntas relacionadas con temas religiosos, generalmente incómodos."
+  },
+  {
+    "category": "Filosofía",
+    "description": "Preguntas relacionadas con la ciencia de la divagación."
+  },
+  {
+    "category": "Terapias alternativas",
+    "description": "Preguntas relacionadas con toda clase de supercherías, pero que si funcionan."
+  },
+  {
+    "category": "Cine de culto",
+    "description": "Preguntas relacionadas con películas raras que casi nadie ve ni conoce."
+  },
+  {
+    "category": "Historia Prohibida",
+    "description": "Preguntas relacionadas con eventos con los que la ciencia formal no quiere lidiar."
+  },
+  {
+    "category": "Ciencias ocultas",
+    "description": "Preguntas relacionadas con esos temas para mentes curiosas como brujeria, adivinación, viajes astrales, etc."
+  }
+]
