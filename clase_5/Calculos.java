@@ -1,4 +1,4 @@
-package Calculadora;
+package clase_5;
 
 import javax.swing.*;
 public class Calculos  {
