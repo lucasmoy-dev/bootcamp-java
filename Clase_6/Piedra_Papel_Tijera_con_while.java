@@ -14,6 +14,8 @@ public class Piedra_Papel_Tijera_con_while {
 
     static Scanner opcionUsuario = new Scanner(System.in);
     static Scanner continuaLoop = new Scanner(System.in);
+
+    
     public static void main(String[] args) {
         int eleccionCPU ;
 
