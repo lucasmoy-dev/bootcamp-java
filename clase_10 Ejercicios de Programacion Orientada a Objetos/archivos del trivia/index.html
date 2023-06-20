@@ -1,0 +1,105 @@
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="script.js"></script>
+
+
+
+<div id="dialog" class="dialog">
+  <div class="question">¿Cuál es la capital de Francia?</div>
+  <div class="options">
+    <div class="option">
+      <input type="radio" id="option1" name="answer" value="option1">
+      <label for="option1">Madrid</label>
+    </div>
+    <div class="option">
+      <input type="radio" id="option2" name="answer" value="option2">
+      <label for="option2">Londres</label>
+    </div>
+    <div class="option">
+      <input type="radio" id="option3" name="answer" value="option3">
+      <label for="option3">París</label>
+    </div>
+  </div>
+  <div id="result">
+    <span id="result-ok">¡Correcto!</span>
+    <span id="result-fail">¡Incorrecto!</span><br/>
+    <span id="explanation"></span>
+  </div><br/>
+  <button id="btnSend">Enviar</button>
+  <button id="btnClose">Cerrar</button>
+</div>
+
+<div class="outer-container">
+  <h1 class="wish">¡Trivia!</h1>
+  <div class="container">
+    <div class="arrow"></div>
+    <div class="wheel">
+      <div class="inner-wheel" id="wheel">
+        <div class="section"><span>Historia</span></div>
+        <div class="section"><span>Ciencia</span></div>
+        <div class="section"><span>Cultura</span></div>
+        <div class="section"><span>Deportes</span></div>
+        <div class="section"><span>Arte</span></div>
+        <div class="section"><span>Cine</span><span class="fa fa-birthday-cake"></span></div>
+      </div>
+      <div class="spin-button">
+        <span>&#x21BB;</span></div>
+    </div>
+  </div>
+</div>
+<div class="overlay">
+  <h1>
+     I love<br/>you berrrry<br/>much</h1>
+  <div class="cherry-container-1">
+    <div class="cherry">
+      <div class="leaf"></div>
+    </div>
+  </div>
+  <div class="cherry-container-2">
+    <div class="cherry">
+      <div class="leaf"></div>
+    </div>
+  </div>
+  <div class="cherry-container-3">
+    <div class="cherry">
+      <div class="leaf"></div>
+    </div>
+  </div>
+  <div class="cherry-container-4">
+    <div class="cherry">
+      <div class="leaf"></div>
+    </div>
+  </div>
+  <div class="cherry-container-5">
+    <div class="cherry">
+      <div class="leaf"></div>
+    </div>
+  </div>
+  <div class="cherry-container-6">
+    <div class="cherry">
+      <div class="leaf"></div>
+    </div>
+  </div>
+  <div class="cherry-container-7">
+    <div class="cherry">
+      <div class="leaf"></div>
+    </div>
+  </div>
+  <div class="cherry-container-8">
+    <div class="cherry">
+      <div class="leaf"></div>
+    </div>
+  </div>
+  <div class="cherry-container-9">
+    <div class="cherry">
+      <div class="leaf"></div>
+    </div>
+  </div>
+</div>
+
+
+<div>
+  <label>URL de la pregunta: </label><input id="txtUrlQuestion" type="text" value="http://localhost:8080/question" /><br/>
+  <label>URL de categorias:  </label><input id="txtUrlCategories" type="text" value="http://localhost:8080/categories" /><br/>
+  <button id="btnRefresh">Actualizar</button>
+</div>
