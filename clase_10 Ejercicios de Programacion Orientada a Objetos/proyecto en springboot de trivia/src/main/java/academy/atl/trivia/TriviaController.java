@@ -8,10 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.time.LocalDate;
+import java.util.*;
 
 @RestController
 public class TriviaController {
@@ -33,6 +31,14 @@ public class TriviaController {
                 "  \"answer\": aqui va la respuesta correcta en caso de ser la primera es el numero 0 en caso de ser la segunda es el 1 y en caso de ser la tercera es el 2,\n" +
                 "  \"explanation\": \"aca tienes que poner una explicacion diciendo porque es la respuesta correcta\"\n" +
                 "}");
+
+        Scanner insert = new Scanner(System.in);
+        String fechaEnTexto = insert.next();
+        LocalDate fechaConvertida = LocalDate.parse(fechaEnTexto);
+        customer.setDate(fechaConvertida);
+
+        LocalDate.parse(insert.next())
+
         return respuestaJson;
         //ObjectMapper convertidor = new ObjectMapper();
         //Pregunta preg = convertidor.convertValue(respuestaJson, Pregunta.class);
