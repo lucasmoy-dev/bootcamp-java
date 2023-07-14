@@ -1,12 +1,9 @@
 package academy.atl.trivia;
 
-import academy.atl.trivia.entities.Categoria;
-import academy.atl.trivia.entities.Pregunta;
-import ch.qos.logback.core.net.ObjectWriter;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import academy.atl.trivia.entities.Category;
+import academy.atl.trivia.repository.CategoryRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.*;
@@ -14,32 +11,38 @@ import java.util.*;
 @RestController
 public class TriviaController {
 
+    @Autowired
+    CategoryRepository categoryRepository;
+
+    @GetMapping("/hola")
+    public String prueba1() {
+        return "Esta url usa un GET";
+    }
+    @DeleteMapping("/hola")
+    public String prueba2() {
+        return "Esta url usa un DELETE";
+    }
+    @PostMapping("/hola")
+    public String prueba3() {
+        return "Esta url usa un POST";
+    }
+
+
+    @GetMapping("/busqueda-{id}")
+    public Category buscarPorId(@PathVariable Long id) {
+        return categoryRepository.findById(id);
+    }
+
+
     @GetMapping("/question/{categoria}")
-    public String getQuestion(@PathVariable String categoria) {
+    public Category getQuestion(@PathVariable String categoria) {
 
-        ChatGptClient chatGpt = new ChatGptClient();
-        String respuestaJson = chatGpt.enviarPregunta("Estoy armando una trivia, necesito que me des una pregunta de la categoria " + categoria + ", con la siguiente estructura de JSON. LA respuesta de la pregunta no siempre tiene que ser la primera, tiene que variar:\n" +
-                "\n" +
-                "{\n" +
-                "  \"category\": \"aca va el nombre de la categoria\",\n" +
-                "  \"question\": \"aca va la pregunta\",\n" +
-                "  \"options\": [\n" +
-                "    \"aca va la opcion 1\",\n" +
-                "    \"aca va la opcion 2\",\n" +
-                "    \"aca va la opcion 3\"\n" +
-                "  ],\n" +
-                "  \"answer\": aqui va la respuesta correcta en caso de ser la primera es el numero 0 en caso de ser la segunda es el 1 y en caso de ser la tercera es el 2,\n" +
-                "  \"explanation\": \"aca tienes que poner una explicacion diciendo porque es la respuesta correcta\"\n" +
-                "}");
 
-        Scanner insert = new Scanner(System.in);
-        String fechaEnTexto = insert.next();
-        LocalDate fechaConvertida = LocalDate.parse(fechaEnTexto);
-        customer.setDate(fechaConvertida);
 
-        LocalDate.parse(insert.next())
-
-        return respuestaJson;
+        List<Category> resultado = new ArrayList<>();
+        Category ejemplo = categoryRepository.findById(1L);
+        resultado.add(ejemplo);
+        return ejemplo;
         //ObjectMapper convertidor = new ObjectMapper();
         //Pregunta preg = convertidor.convertValue(respuestaJson, Pregunta.class);
         //return preg;
@@ -47,20 +50,20 @@ public class TriviaController {
 
 
     @GetMapping("/categories")
-    public Categoria[] getCategories() {
+    public Category[] getCategories() {
 
-        Categoria cat = new Categoria();
-        cat.setCategory("Arte");
+        Category cat = new Category();
+        cat.setName("Arte");
         cat.setDescription("Preguntas relacionadas con arte, literatura, música y otras expresiones culturales.");
 
-        Categoria cat2 = new Categoria();
-        cat2.setCategory("Deportes");
+        Category cat2 = new Category();
+        cat2.setName("Deportes");
         cat2.setDescription("Preguntas relacionadas con diversos deportes y eventos deportivos.");
 
-        Categoria[] categorias = new Categoria[2];
-        categorias[0] = cat;
-        categorias[1] = cat2;
-        return categorias;
+        Category[] categories = new Category[2];
+        categories[0] = cat;
+        categories[1] = cat2;
+        return categories;
 
         /*return "[\n" +
                 "  {\n" +

@@ -1,26 +1,19 @@
 package academy.atl.trivia.entities;
 
-public class Pregunta {
+public class Question {
 
-    private String category;
+    private Category category;
     private String question;
     private String[] options;
     private Integer answer;
     private String explanation;
 
-    public Pregunta(String category, String question, String[] options, Integer answer, String explanation) {
-        this.category = category;
-        this.question = question;
-        this.options = options;
-        this.answer = answer;
-        this.explanation = explanation;
-    }
 
-    public String getCategory() {
+    public Category getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(Category category) {
         this.category = category;
     }
 
