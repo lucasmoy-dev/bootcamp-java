@@ -24,6 +24,6 @@ public class EmailRepository {
         String consultaSql = "DELETE FROM Lead WHERE email = :paramEmail";
         baseDeDatos.createQuery(consultaSql)
                 .setParameter("paramEmail", emailDelUsuario)
-                .executeUpdate();
+                .getResultList();
     }
 }

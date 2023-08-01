@@ -35,4 +35,5 @@ public class Vendedor {
 
     @Column(name = "fecha_eliminacion")
     private LocalDate fechaEliminacion;
+
 }

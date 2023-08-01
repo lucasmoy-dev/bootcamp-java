@@ -63,8 +63,9 @@ public class Propiedad {
     @JoinColumn(name = "id_vendedor")
     private Vendedor vendedor;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     @JoinColumn(name = "id_galeria")
     private Galeria galeria;
+
 
 }
